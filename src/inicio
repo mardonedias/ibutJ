@@ -1,0 +1,31 @@
+### Apresentação ###
+IbutJ é uma biblioteca java que contém os componentes visuais JTBar para criação de barra de botões CRUD (acrônimo de Create, Read, Update e Delete) e JDPane com funcionalidades para geração de interface MDI (acrônimo para multiple document interface). Foi desenvolvida por Mardone Dias de Oliveira, Analista Desenvolvedor de Sistemas, Professor Coordenador do Curso de Informática da EEEP Avelino Magalhães.  
+
+### Componentes ###
+**JTBar** possibilita ao desenvolvedor adicionar os botões CRUD ao formulário, apenas selecionando na paleta de componentes e arrastando para o formulário. Inclusive a configuração básica do componente pode ser realizada através da paleta propriedades.  
+
+**JDPane** Herda todas as funcionalidades do JDesktopPane, contém as funcionalidades adicionais que são:  
+
+ * A reescrita do método dragFrame() que é responsável pelo posicionamento do formulário, de modo a delimitar a movimentação do JInternalFrame dentro da área do JDPane;  
+ * organizarEmCascata(), que organiza os formulários em cascata;
+ * fecharTodos(), responsável por fechar todas as JInternalFrame do JDPane;
+ * abrirJanela(), abre um JInternalFrame de do JDPane.  
+
+### Eventos ###
+A barra de botões JTBar contém os botões: btnNovo, btnEditar, btnCancelar, btnSalvar, btnExcluir, btnPesquisar, btnFechar. Para implementar uma ação para esses botões é necessário adicionar um ActionListener. Recomendo que implemente esses eventos dentro construtor da classe após o método initComponents(), como segue abaixo:
+
+    public NomeDaClasse(){
+        //Inicializa componentes da classe.
+        initComponents();
+        
+        //Adiciona evento ao botão btnNovo.
+        btnNovo.addActionListener(new JAction() {   
+            @Override               
+            public void click(ActionEvent e) {  
+                //Corpo do código.
+            }  
+        });
+    }
+
+### Licença ###
+ibutJ é um software livre; você pode redistribui-lo e/ou modifica-lo dentro dos termos da Licença Pública Geral GNU como publicada pela Fundação do Software Livre (FSF); na versão 2 da Licença, ou (na sua opnião) qualquer versão.

@@ -1,0 +1,42 @@
+== CHANGELOG ==
+
+
+----------------------------------------------
+--(1.2.2) 22/09/2011 (23:53) (Mardone Dias) --
+----------------------------------------------
+- Adicionado classe javabean JTbar. Componente visual da barra de ferramentas Crud.
+- Alterado classe JForm. Foi retirada todas as funcionalidade da barra de ferramentas crud.
+
+----------------------------------------------
+--(1.1.1) 12/09/2011 (00:25) (Mardone Dias) --
+----------------------------------------------
+- Adicionado classe JAction que implementa ActionListener. Essa classe ajuda na manipulação dos eventos possiblitando a atualização dos botões do crud de forma autormática. O usuário basta chamar o eventos click() e adicionar a função do botão.
+- Alterado classe JForm. Adicionado a cada botão o evento atualizarEstado() passando como ação crudAtualizar(), eliminando a necessidade de chamar o método crudAtualizar() no JInternalFrame. Bug-02 corrigido.
+
+--------------------------------------
+--(1.0.0) 04/07/2011 (Mardone Dias) --
+--------------------------------------
+- Adicionado Classe JDPane (JDesktopPane), com os métodos organizarEmCascata(), fecharTodos() e abrirJanela();
+- Adicionado Classe JDPaneManager (JDesktopManager), com o método dragFrame();
+- Adicionado Classe JForm (JInternalFrame), com os métodos iniciarFormulario(), setRecursos(), setImagem(), trocarPainel(), centralizarFormulario(), fechar(), crudAdicao(). crudEdicao(), crudNavegacao(), crudAtualizar(), limpar(), ativarComponentes(), ativar(), destivar();
+- Adicionado Classe HibernateConf, com os métodos getConfiguration(), getBD(), getPorta(), getServidor(), setPropriedades(), setUsuario(), setSenha(), setMostrarSQL(), setPoolSize(), iniciarPropriedades(), addClasse(), addClasseAnotada(), lerArquivoTXT(), lerArquivo();
+- Adicionado Classe HibernateUtil, com os métodos inicializar(), reinicializar(), setConfiguracao(), limparSessao(), getSessao(), fecharSessao(), getConexao();
+- Adicionado Classe Arquivo, com os métodos escreverEmArquivo(), lerArquivo();
+
+
+== BUG ==
+-- 01 [04/07/2011] - Quando o endereço do servidor é diferente de localhost a conexão com o mysql trava.
+--->> Não foi testado em uma rede.
+--->> Foi testado com o mysql do pacote lampp.
+--->> [x] Não corrigido [ ] Corrigido
+
+-- 02 [12/09/2011] - Métodos ativarComponentes() e limpar(), não funcionam em sub-containers.
+--->> [ ] Não corrigido [x] Corrigido
+
+-- 03 [12/09/20110] - O botão cancelar da classe JForm. Deveria voltar os acampos para seu estado anterior a ação de adição o edição, mas, não está fazendo.
+--->> [x] Não corrigido [ ] Corrigido
+
+ 
+
+-- 04 [] - 
+
